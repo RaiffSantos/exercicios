@@ -24,12 +24,12 @@ public class Exercicio13 {
 			    System.out.println("Masculino \n O peso ideal é: " + pesoIdealM); //o \n serve pra quebrar a linha
 		    
 			    //testando o peso ideal
-				if(peso < (pesoIdealM - 2)){
+				if(peso <= (pesoIdealM - 2)){
 					System.out.println("Voce esta abaixo do peso ideal");
-				}else if(peso >= (pesoIdealM -1) && peso <= (pesoIdealM + 1)){
+				}else if(peso >= (pesoIdealM - 1.99) && peso <= (pesoIdealM + 1.99)){
 					System.out.println("Voce esta em seu peso ideal");
-				}else if(peso > pesoIdealM + 2){
-					System.out.println("Voce esta acima do peso");
+				}else if(peso >= pesoIdealM + 2){
+					System.out.println("Voce esta acima do peso ideal");
 				}
 			    
 			    break; //Quando a condição é acertada ele para de procurar nos outros 'case' abaixo.
@@ -38,12 +38,12 @@ public class Exercicio13 {
 			    double pesoIdealF = (62.1 * altura) - 44.7;
 			    System.out.println("Feminino \n O peso ideal é: " + pesoIdealF);
 			    
-			    if(peso < (pesoIdealF - 2)){
+			    if(peso <= (pesoIdealF - 2)){
 					System.out.println("Voce esta abaixo do peso ideal");
-				}else if(peso >= (pesoIdealF -1) && peso <= (pesoIdealF + 1)){
+				}else if(peso >= (pesoIdealF - 1.99) && peso <= (pesoIdealF + 1.99)){
 					System.out.println("Voce esta em seu peso ideal");
-				}else if(peso > pesoIdealF + 2){
-					System.out.println("Voce esta acima do peso");
+				}else if(peso >= pesoIdealF + 2){
+					System.out.println("Voce esta acima do peso ideal");
 				}
 			    
 			    break;
