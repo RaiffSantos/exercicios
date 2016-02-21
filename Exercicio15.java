@@ -1,5 +1,6 @@
 package exercicios;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Exercicio15 {
@@ -7,6 +8,7 @@ public class Exercicio15 {
 	public static void main(String [] args){
 		
 		Scanner ler = new Scanner(System.in);
+		NumberFormat valor = NumberFormat.getCurrencyInstance();
 		
 		System.out.println("Informe o valor da hora trabalhada: ");
 		double valorHora = ler.nextDouble();
@@ -25,10 +27,10 @@ public class Exercicio15 {
 		double valorSindicato = (salarioBruto * sindicato) / 100;
 		double salarioLiquido = salarioBruto - (valorIR + valorINSS + valorSindicato);
 		
-		System.out.println("Salario bruto = "             + salarioBruto + "\n"
-				         + "Quanto pagou ao INSS = "      + valorINSS + "\n"
-				         + "Quanto pagou ao sindicato = " + valorSindicato + "\n"
-				         + "Salário liquido = "           + salarioLiquido);
+		System.out.println("Salario bruto = "             + valor.format(salarioBruto) + "\n"
+				         + "Quanto pagou ao INSS = "      + valor.format(valorINSS) + "\n"
+				         + "Quanto pagou ao sindicato = " + valor.format(valorSindicato) + "\n"
+				         + "Salário liquido = "           + valor.format(salarioLiquido));
 		
 	}
 
