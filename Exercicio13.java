@@ -10,16 +10,18 @@ public class Exercicio13 {
 
 		System.out.println("Informe o sexo, 'm' para MASCULINO ou 'f' para FEMININO: ");
 		String sexo = ler.nextLine();
+		
 		System.out.println("Informe sua altura");
 		double altura = ler.nextDouble();
+		
 		System.out.println("Informe seu peso:");
 		double peso = ler.nextDouble();
 		
 		
 		//O switch trata a variavel 'sexo' em dois casos, se for masculino e se for feminino
-		switch(sexo){
+		switch(sexo.toUpperCase()){
 		    
-		    case "m":
+		    case "M":
 			    double pesoIdealM = (72.7 * altura) - 58;
 			    System.out.println("Masculino \n O peso ideal é: " + pesoIdealM); //o \n serve pra quebrar a linha
 		    
@@ -34,7 +36,7 @@ public class Exercicio13 {
 			    
 			    break; //Quando a condição é acertada ele para de procurar nos outros 'case' abaixo.
 		
-		    case "f":
+		    case "F":
 			    double pesoIdealF = (62.1 * altura) - 44.7;
 			    System.out.println("Feminino \n O peso ideal é: " + pesoIdealF);
 			    
